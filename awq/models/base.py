@@ -36,7 +36,6 @@ from transformers import (
     PretrainedConfig,
     AutoProcessor,
     BaseImageProcessor,
-    ProcessorMixin,
     PreTrainedTokenizer,
 )
 from accelerate.big_modeling import (
@@ -55,10 +54,11 @@ from awq.utils.module import get_named_linears, set_op_by_name
 TRANSFORMERS_AUTO_MAPPING_DICT = {
     "mpt": "AutoModelForCausalLM",
     "llama": "AutoModelForCausalLM",
+    "granite": "AutoModelForCausalLM",
     "opt": "AutoModelForCausalLM",
+    "nemotron": "AutoModelForCausalLM",
     "RefinedWeb": "AutoModelForCausalLM",
     "RefinedWebModel": "AutoModelForCausalLM",
-    "exaone": "AutoModelForCausalLM",
     "falcon": "AutoModelForCausalLM",
     "bloom": "AutoModelForCausalLM",
     "gptj": "AutoModelForCausalLM",
